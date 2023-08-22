@@ -1,0 +1,19 @@
+.bg-img1 {
+  background-color: aliceblue;
+  background-size: cover;
+  background-image: url(banner.jpg);
+  height: 400px;
+}
+
+.bg-img2 {
+  background-color: aliceblue;
+  background-size: cover;
+  background-image: url(chair-3.jpg);
+  height: 400px;
+}
+.bg-img3 {
+  background-color: aliceblue;
+  background-size: cover;
+  background-image: url(banner.jpg);
+  height: 400px;
+}

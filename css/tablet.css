@@ -1,4 +1,4 @@
-@media screen and (max-width: 20000px) and (min-width: 770px) {
+@media screen and (max-width: 769px) and (min-width: 481px) {
   * {
     margin: 0px;
     box-sizing: border-box;
@@ -44,13 +44,16 @@ bằng css transform */
   }
 
   /* Thiết lập các element của nav bar là Inline-block để nó đứng 1 hàng, đồng thời thêm border xung quanh
- xóa hiệu ứng khi có link của các element*/
-  .content-nav,
-  .content-nav2 {
+xóa hiệu ứng khi có link của các element*/
+  .content-nav {
     display: inline-block;
     border-left: solid 1px rgb(10, 10, 10);
     text-decoration: none;
-    text-color: white;
+  }
+  /* ẩn avatar và Phần họ tên */
+  .content-nav2,
+  .avatar {
+    display: none;
   }
   .nav-last {
     border-right: solid 1px black;
@@ -114,9 +117,9 @@ và 1 cột là Thông tin cá nhân  */
 các dòng các cột và padding   */
   .job-infoclass {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    column-gap: 20px;
-    row-gap: 30px;
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+    row-gap: 10px;
     padding-bottom: 20px;
   }
   /* Chỉnh màu sắc và kích cỡ cho phần icon ở tiêu đề */
@@ -178,44 +181,38 @@ text chiếm 3 phần, phần icon chiếm 4 phần */
     grid-template-columns: 50% 50%;
   }
   /* trong mỗi cột của grid chứng chỉ chúng ta chia tiếp làm 2 grid với 2 cột */
-  .item-chungchi {
+  /* .item-chungchi {
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-rows: 50% 50%;
     margin: 20px;
-  }
+  } */
   /* Set phần dự án làm grid với cột bằng nhau để hiển thị 3 dự án */
   .grid-duan {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* border-collapse: collapse; */
-    /* border: 1px solid black; */
-    gap: 20px;
+    grid-template-columns: 33% 33% 33%;
+    border-collapse: collapse;
+    column-gap: 20px;
   }
-  .col-grid {
-    display: grid;
-    grid-template-rows: auto 1fr 1fr;
-    /* gap: 10px; */
-    /* border: 1px solid black; */
-  }
-
-  .col-grid img {
-    max-width: 100%;
-    height: auto;
+  .item-gridduan {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border: 1px solid black;
   }
   /* Kẻ border cho phần tiêu đề dự án */
-  /* .tieude-duan {
-    border-top: 1px solid black;
-  } */
+  .tieude-duan {
+    border: 1px solid black;
+  }
   /* trong mỗi dự án lại được set làm grid với 3 cột bằng nhau */
   .gridnho {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    /* border-left: 1px solid black;
-    border-right: 1px solid black; */
+    border-left: 1px solid black;
+    border-right: 1px solid black;
     padding: 10px;
   }
-  .item-gridduan {
-    border: 1px solid black;
+  .col-grid img {
+    max-width: 100%;
+    height: auto;
   }
   /* Set phần icon social ở Footer */
   .social-footer {
@@ -258,11 +255,11 @@ text chiếm 3 phần, phần icon chiếm 4 phần */
     transform: translate(-50%, -50%);
   }
   /* Thiết lập hiệu ứng phần table ở mục dự án */
-  /* tr {
+  tr {
     border: 1px solid black;
     padding: 30px;
   }
   table {
     border-collapse: collapse;
-  } */
+  }
 }

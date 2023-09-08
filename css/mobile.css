@@ -1,4 +1,4 @@
-@media screen and (max-width: 20000px) and (min-width: 770px) {
+@media screen and (max-width: 480px) {
   * {
     margin: 0px;
     box-sizing: border-box;
@@ -9,7 +9,7 @@
   }
 
   section > .container {
-    width: 1170px;
+    width: auto;
     margin: auto;
     /* display: block; */
 
@@ -17,7 +17,6 @@
   }
 
   #nav-bar {
-    text-align: center;
     margin: 0 auto;
     position: relative;
   }
@@ -45,16 +44,16 @@ bằng css transform */
 
   /* Thiết lập các element của nav bar là Inline-block để nó đứng 1 hàng, đồng thời thêm border xung quanh
  xóa hiệu ứng khi có link của các element*/
-  .content-nav,
-  .content-nav2 {
-    display: inline-block;
-    border-left: solid 1px rgb(10, 10, 10);
+  .content-nav {
+    display: block;
+    /* border-left: solid 1px rgb(10, 10, 10); */
     text-decoration: none;
-    text-color: white;
   }
-  .nav-last {
-    border-right: solid 1px black;
+  .content-nav2,
+  .avatar {
+    display: none;
   }
+
   /* Thiết lập khoảng cách padding cho các element trong nav bar */
   .content-nav {
     padding: 30px;
@@ -80,7 +79,7 @@ bằng css transform */
 và 1 cột là Thông tin cá nhân  */
   .section2 {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr;
   }
 
   .section-title {
@@ -114,7 +113,7 @@ và 1 cột là Thông tin cá nhân  */
 các dòng các cột và padding   */
   .job-infoclass {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr;
     column-gap: 20px;
     row-gap: 30px;
     padding-bottom: 20px;
@@ -134,14 +133,14 @@ và padding cho từng cell đó */
 text chiếm 3 phần, phần icon chiếm 4 phần */
   .tieude {
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 1fr;
     padding-bottom: 20px;
     align-items: center;
   }
   /* Với phần sở thích sẽ được set làm grid gồm 4 cột bằng nhau */
   .grid-sothich {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 1fr;
   }
   /* set up các icon trong phần sở thích với vòng tròn xung quanh */
   .gridsothich-item {
@@ -175,25 +174,25 @@ text chiếm 3 phần, phần icon chiếm 4 phần */
   /* Set phần chứng chỉ là grid với 2 cột */
   .grid-chung-chi {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr;
   }
   /* trong mỗi cột của grid chứng chỉ chúng ta chia tiếp làm 2 grid với 2 cột */
   .item-chungchi {
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 1fr;
     margin: 20px;
   }
   /* Set phần dự án làm grid với cột bằng nhau để hiển thị 3 dự án */
   .grid-duan {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     /* border-collapse: collapse; */
     /* border: 1px solid black; */
     gap: 20px;
   }
   .col-grid {
     display: grid;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: 1fr;
     /* gap: 10px; */
     /* border: 1px solid black; */
   }
